@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects · Rojika Sharma</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <ul>
+      <li><a href="index.html#about">About me</a></li>
+      <li><a href="portfolio.html" class="active">Projects</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
+      <li><a href="index.html#cv">CV</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero pf-hero">
+    <p class="pf-eyebrow">Projects</p>
+    <h1>Web Design &amp; Digital Strategy</h1>
+    <p class="pf-tagline">An ongoing repository of my web design, digital campaigns, and community archives, built with intention, accessibility, and care.</p>
+    <div class="pf-hero-actions">
+      <a href="#projects" class="btn-solid">See my work</a>
+      <a href="#contact" class="btn-outline-light">Work with me</a>
+    </div>
+  </div>
+
+
+  <!-- STAR: green band → white -->
+  <div class="star-divider star-seam" aria-hidden="true">★</div>
+  <!-- PROJECTS -->
+  <section id="projects" class="white-section">
+    <h2 class="sec-heading dark-heading">Selected Projects</h2>
+
+    <!-- To add a project: copy one <details class="project"> block, then swap in the
+         title, tags, description, and a full-page screenshot saved in the images/ folder. -->
+    <div class="project-list">
+
+      <details class="project">
+        <summary>
+          <span class="project-name">WCEO Aspire: Member Directory &amp; Online Experience</span>
+          <span class="project-tags">Platform Design · UX · Data</span>
+          <span class="project-status">In progress</span>
+          <span class="project-toggle" aria-hidden="true"></span>
+        </summary>
+        <div class="project-detail">
+          <p>As Platform Manager and Designer for the Aspire Online Community at the Women's Center for Economic Opportunity (WCEO), I architect sociotechnical systems for an emerging network of women business leaders. My work bridges platform design, community ecology, and data justice, creating interoperable spaces for learning and growth while establishing data governance practices grounded in digital care and collective agency.</p>
+          <ul class="project-points">
+            <li><strong>Member directory:</strong> a searchable directory of women business leaders and their profiles.</li>
+            <li><strong>Member journey:</strong> the online process from sign-up and onboarding to staying engaged.</li>
+            <li><strong>Connected platforms:</strong> linking tools for education, networking, and growth into one experience.</li>
+            <li><strong>Data systems:</strong> how member data is collected, kept up to date, and retained responsibly.</li>
+          </ul>
+          <div class="browser-frame">
+            <div class="browser-bar"><span></span><span></span><span></span><p class="browser-url">womensceo.org/aspireoct</p></div>
+            <video class="loop-video" src="images/wceo-aspire.mp4" poster="images/wceo-aspire-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Walkthrough of the WCEO Aspire website: issue switcher, leader story carousel, and article pop-ups"></video>
+          </div>
+          <p class="frame-note">A walkthrough of the site: the issue switcher, leader story carousel, and article pop-ups.</p>
+        </div>
+      </details>
+
+      <details class="project">
+        <summary>
+          <span class="project-name">Echoes of Home: SAADA Digital Exhibit</span>
+          <span class="project-tags">Community Archive · Oral History</span>
+          <span class="project-toggle" aria-hidden="true"></span>
+        </summary>
+        <div class="project-detail">
+          <p>As an Archival Creators Fellow, I led a public-facing oral history project with Bhutanese refugees in Central Ohio for the South Asian American Digital Archive (SAADA), a public digital archive. I worked alongside artists and community leaders so the exhibit reflects how the community sees itself, with artwork by Bikash Rai.</p>
+          <ul class="project-points">
+            <li><strong>Oral histories:</strong> recorded and translated interviews with seven community members.</li>
+            <li><strong>Community collaboration:</strong> shaped the storytelling with artists and community leaders.</li>
+            <li><strong>Equity-centered process:</strong> recruitment, data collection, and budgets designed with equity in mind.</li>
+          </ul>
+          <div class="browser-frame">
+            <div class="browser-bar"><span></span><span></span><span></span><p class="browser-url">saada.org/explore/exhibits/echoes-of-home</p></div>
+            <div class="browser-view">
+              <img src="images/saada-echoes.jpg" alt="The Echoes of Home exhibit page on the SAADA website, with Bikash Rai's painting of Bhutan, a refugee camp, and a Columbus neighborhood" loading="lazy"/>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="project">
+        <summary>
+          <span class="project-name">Social Media &amp; Digital Campaigns</span>
+          <span class="project-tags">Content · Video · Campaigns</span>
+          <span class="project-toggle" aria-hidden="true"></span>
+        </summary>
+        <div class="project-detail course-list">
+          <!-- Add another client: copy this .course block -->
+          <div class="course">
+            <p class="course-title">Green Olive Company</p>
+            <p class="course-meta">Social media &amp; holiday campaign &nbsp;·&nbsp; Current</p>
+            <p>I run their social media, filming and posting video content that shares their products and story, and I'm leading their holiday campaign from planning to posting.</p>
+          </div>
+        </div>
+      </details>
+
+    </div>
+  </section>
+
+  <div class="star-sep" aria-hidden="true">★</div>
+
+  <!-- WHAT I DO: compact rows -->
+  <section id="services" class="cream-section">
+    <h2 class="sec-heading">What I Do</h2>
+    <div class="service-rows">
+      <div class="service-row">
+        <h3>Web Design &amp; Development</h3>
+        <p>Accessible, responsive websites designed in Figma and built in HTML, CSS, and JavaScript.</p>
+      </div>
+      <div class="service-row">
+        <h3>Digital Campaigns &amp; Activations</h3>
+        <p>Social media, email, and event campaigns that bring people in and keep them engaged.</p>
+      </div>
+      <div class="service-row">
+        <h3>Program Design</h3>
+        <p>Programs, workshops, and member journeys designed around how people learn and participate.</p>
+      </div>
+      <div class="service-row">
+        <h3>User-Centered Research</h3>
+        <p>Interviews, observation, and community input that shape solutions people actually use.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="star-sep" aria-hidden="true">★</div>
+
+  <!-- CONTACT -->
+  <section id="contact" class="dark-section contact-section">
+    <p class="contact-line">Get in touch</p>
+    <div class="contact-links">
+      <a href="mailto:rojikas99@gmail.com">rojikas99 [at] gmail [dot] com</a>
+      <a href="https://www.linkedin.com/in/rojika-s-96830b166" target="_blank">LinkedIn</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Home</a> ✦
+      <a href="mailto:rojikas99@gmail.com">Email</a> ✦
+      <a href="https://www.linkedin.com/in/rojika-s-96830b166" target="_blank">LinkedIn</a>
+    </div>
+    <p class="footer-credit">Website design by me :)</p>
+  </footer>
+
+  <script>
+    // Respect reduced-motion settings: don't autoplay the walkthrough loops, show controls instead
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.querySelectorAll('.loop-video').forEach(function (v) {
+        v.removeAttribute('autoplay');
+        v.pause();
+        v.controls = true;
+      });
+    }
+  </script>
+</body>
+</html>
