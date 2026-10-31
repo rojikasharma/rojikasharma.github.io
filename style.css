@@ -608,3 +608,17 @@ footer { padding: 14px 24px; margin-top: 8px; }
 #portfolio, #works, #contact { padding-top: 16px; padding-bottom: 16px; }
 .hero { padding-bottom: 12px; }
 .star-seam { margin-bottom: 0; }
+
+/* Keep project screenshots and video crisp: lift them above the grain overlay */
+.browser-frame { position: relative; z-index: 1001; }
+/* Nav must stay above the lifted frames when scrolling, so it carries its own grain */
+nav { z-index: 1002; }
+nav::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.2;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n);
+  background-size: 220px 220px;
+}
