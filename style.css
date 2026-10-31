@@ -747,3 +747,13 @@ body { font-family: 'Karla', sans-serif; font-size: 15.5px; }
 .hand-note { color: rgba(255,255,255,0.75); font-size: 16px; margin-top: 2px; }
 .pf-eyebrow { color: rgba(255,255,255,0.7); font-size: 14px; }
 @media (max-width: 720px) { .hand-note { font-size: 15px; } }
+
+/* Projects page keeps the pink handwritten notes */
+.projects-page .pf-eyebrow, .projects-page .project-tags, .projects-page .project-status {
+  font-family: 'Caveat', cursive;
+  font-style: normal;
+  font-weight: 500;
+}
+.projects-page .pf-eyebrow { color: var(--pink); font-size: 22px; transform: rotate(-1.5deg); }
+.projects-page .project-tags { color: var(--pink-muted); font-size: 18px; }
+.projects-page .project-status { color: var(--teal); font-size: 18px; }
