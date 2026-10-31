@@ -587,3 +587,24 @@ footer { padding: 18px 24px; }
   .star-divider { height: 36px; font-size: 36px; }
 }
 .about-links li { white-space: nowrap; }
+
+/* Tighter still: trim vertical gaps between and around sections */
+.hero { padding: 20px 32px 0; }
+#about { padding-top: 0; padding-bottom: 24px; }
+#about .about-inner { align-items: start; }
+.dark-section, .cream-section, .white-section { padding: 16px 32px; }
+.pf-hero { padding: 32px 32px 36px; }
+.sec-heading { margin-bottom: 14px; }
+.star-divider { height: 36px; font-size: 36px; }
+.star-sep { font-size: 18px; padding: 0; line-height: 1; }
+.github-wrap { margin-top: 12px !important; }
+#projects, #services { padding-top: 16px; padding-bottom: 16px; }
+footer { padding: 14px 24px; margin-top: 8px; }
+@media (max-width: 720px) {
+  .dark-section, .cream-section, .white-section { padding: 14px 16px; }
+  .hero { padding: 16px 16px 0; }
+  .pf-hero { padding: 24px 16px 28px; }
+}
+#portfolio, #works, #contact { padding-top: 16px; padding-bottom: 16px; }
+.hero { padding-bottom: 12px; }
+.star-seam { margin-bottom: 0; }
