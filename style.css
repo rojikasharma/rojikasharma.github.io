@@ -619,7 +619,7 @@ nav::after {
   inset: 0;
   pointer-events: none;
   opacity: 0.2;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   background-size: 220px 220px;
 }
 #open-to { padding-top: 8px; padding-bottom: 20px; }
@@ -627,3 +627,23 @@ nav::after {
 .inline-link { color: var(--pink-muted); text-decoration: underline; text-underline-offset: 3px; }
 .inline-link:hover { opacity: 0.75; }
 #open-to a.inline-link { color: var(--pink-muted); }
+
+/* Grain: strong on the green areas, barely-there on white so it stays clean white */
+body::after { opacity: 0.05; }
+.hero, #about, .pf-hero { position: relative; }
+.hero::after, #about::after, .pf-hero::after, nav::after, .star-seam::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.18;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 220px 220px;
+}
+/* Keep the photo crisp, above all grain layers */
+.about-photo img { position: relative; z-index: 1001; }
+.about-right, .about-links, .hero h1, .pf-hero > * { position: relative; z-index: 1; }
+/* grain only on the green half of the star seam */
+.star-seam::before { bottom: 50%; }
+.star-seam { color: transparent; }
+.star-seam::after { content: "★"; color: var(--pink); position: absolute; left: 0; right: 0; text-align: center; z-index: 2; }
