@@ -647,3 +647,103 @@ body::after { opacity: 0.05; }
 .star-seam::before { bottom: 50%; }
 .star-seam { color: transparent; }
 .star-seam::after { content: "★"; color: var(--pink); position: absolute; left: 0; right: 0; text-align: center; z-index: 2; }
+
+/* ════ Hand-made pass: personal fonts, left-aligned layout, handwritten labels, wobbly stars ════ */
+body { font-family: 'Karla', sans-serif; font-size: 15.5px; }
+.hero h1, .sec-heading, .project-name, .course-title, .service-card h3, .pf-hero h1 {
+  font-family: 'Young Serif', serif;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+/* Left-aligned, slightly asymmetric */
+.hero { text-align: left; }
+.hero h1, .hero .hand-note { max-width: 780px; margin-left: auto; margin-right: auto; }
+.hero h1 { font-size: 40px; }
+.hand-note {
+  font-family: 'Caveat', cursive;
+  font-size: 22px;
+  color: var(--pink);
+  transform: rotate(-1.5deg);
+  transform-origin: left;
+  margin-top: -2px;
+}
+.pf-hero { text-align: left; }
+.pf-hero > * { max-width: 720px; margin-left: auto; margin-right: auto; }
+.pf-hero .pf-tagline { margin-left: auto; margin-right: auto; }
+.pf-hero-actions { justify-content: flex-start; }
+.sec-heading { text-align: left; max-width: 720px; margin-left: auto; margin-right: auto; font-size: 26px; }
+#about .about-inner { align-items: start; }
+.about-photo img { transform: rotate(-2deg); }
+.about-right p:first-child::first-letter { font-family: 'Young Serif', serif; font-size: 1.15em; }
+
+/* Handwritten labels instead of small uppercase tags */
+.skills-label, .skills-grid .skills-label, .work-category, .pf-eyebrow, .label, .project-tags, .project-status {
+  font-family: 'Caveat', cursive;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+.skills-label, .skills-grid .skills-label { font-size: 21px; margin-bottom: 0; }
+.work-category { font-size: 21px; border-bottom: 0; padding-bottom: 0; }
+.pf-eyebrow { font-size: 22px; transform: rotate(-2deg); display: inline-block; }
+.project-tags { font-size: 18px; }
+.project-status { font-size: 18px; }
+.project-status::before { content: "~ "; }
+
+/* Lighter dropdowns: title on its own line, note underneath, softer dashed rules */
+.project-list, .service-rows { border-top: 0; }
+.project { border-bottom: 1px dashed #d9dcd4; }
+.project summary { flex-direction: column; align-items: flex-start; gap: 0; }
+.project-name { font-size: 19px; }
+
+/* What I Do as a paragraph */
+.what-i-do { max-width: 720px; margin: 0 auto; font-size: 16px; line-height: 1.85; color: #3a3a3a; }
+.what-i-do strong { font-weight: 600; color: var(--charcoal); background: linear-gradient(transparent 62%, rgba(242,162,182,0.45) 62%); }
+
+/* Hand-drawn wobbly stars */
+.star-divider, .star-sep {
+  color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.star-sep {
+  height: 30px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 6 C53 21 56 32 61 37 C71 38 83 36 95 40 C85 48 76 55 70 62 C73 74 78 84 80 95 C69 88 60 80 51 76 C41 82 31 88 19 94 C23 82 28 72 31 61 C22 54 13 47 5 38 C18 37 29 36 40 35 C44 26 47 17 50 6 Z' fill='%23F2A2B6'/%3E%3C/svg%3E");
+  background-size: 24px 24px;
+}
+.star-sep:nth-of-type(odd) { transform: rotate(14deg); }
+.star-sep:nth-of-type(even) { transform: rotate(-11deg); background-size: 19px 19px; }
+.star-seam::after {
+  content: "";
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 6 C53 21 56 32 61 37 C71 38 83 36 95 40 C85 48 76 55 70 62 C73 74 78 84 80 95 C69 88 60 80 51 76 C41 82 31 88 19 94 C23 82 28 72 31 61 C22 54 13 47 5 38 C18 37 29 36 40 35 C44 26 47 17 50 6 Z' fill='%23F2A2B6'/%3E%3C/svg%3E") no-repeat center / 46px 46px;
+  transform: rotate(-9deg);
+}
+
+@media (max-width: 720px) {
+  .hero h1 { font-size: 30px; }
+  .hand-note { font-size: 19px; }
+  .sec-heading { font-size: 23px; }
+}
+.pf-eyebrow { display: block; transform: rotate(-1.5deg); transform-origin: left; margin-bottom: 2px; }
+.pf-hero .pf-tagline { max-width: 720px; }
+.github-wrap { justify-content: flex-start !important; max-width: 720px; margin-left: auto !important; margin-right: auto !important; }
+#open-to .contact-line { text-align: left; max-width: 720px; }
+.star-sep { max-width: 720px; margin: 0 auto; background-position: left 40px center; }
+.star-sep { display: block; height: 30px !important; margin: 18px auto !important; padding: 0 !important; }
+.pf-hero h1 { max-width: 720px; }
+.star-sep { width: 30px; max-width: 30px; background-position: center; }
+
+/* Labels: quiet italic instead of pink handwriting */
+.hand-note, .skills-label, .skills-grid .skills-label, .work-category, .pf-eyebrow, .label, .project-tags, .project-status {
+  font-family: 'Karla', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  transform: none;
+}
+.skills-label, .skills-grid .skills-label, .work-category, .project-tags, .label { color: var(--muted); font-size: 14px; }
+.project-status { color: var(--teal); font-size: 13.5px; }
+.hand-note { color: rgba(255,255,255,0.75); font-size: 16px; margin-top: 2px; }
+.pf-eyebrow { color: rgba(255,255,255,0.7); font-size: 14px; }
+@media (max-width: 720px) { .hand-note { font-size: 15px; } }
